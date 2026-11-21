@@ -1,4 +1,3 @@
--- Создание главной таблицы "Склады"
 CREATE TABLE warehouses (
     warehouse_id SERIAL PRIMARY KEY,
     capacity INT NOT NULL CHECK (capacity > 0),
@@ -6,7 +5,6 @@ CREATE TABLE warehouses (
     manager VARCHAR(100) NOT NULL
 );
 
--- Создание зависимой таблицы "Размещение" со ссылочной целостностью
 CREATE TABLE placement (
     placement_id SERIAL PRIMARY KEY,
     warehouse_id INT NOT NULL,
